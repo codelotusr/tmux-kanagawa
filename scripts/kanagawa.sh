@@ -23,7 +23,7 @@ main() {
   hide_kubernetes_user=$(get_tmux_option "@kanagawa-kubernetes-hide-user" false)
   terraform_label=$(get_tmux_option "@kanagawa-terraform-label" "")
   show_fahrenheit=$(get_tmux_option "@kanagawa-show-fahrenheit" false)
-  show_location=$(get_tmux_option "@kanagawa-show-location" true)
+  show_location=$(get_tmux_option "@kanagawa-show-location" false)
   fixed_location=$(get_tmux_option "@kanagawa-fixed-location")
   show_powerline=$(get_tmux_option "@kanagawa-show-powerline" false)
   show_flags=$(get_tmux_option "@kanagawa-show-flags" false)
@@ -39,7 +39,7 @@ main() {
   left_icon_padding_right=$(get_tmux_option "@kanagawa-left-icon-padding-right" 1)
   left_icon_margin_right=$(get_tmux_option "@kanagawa-left-icon-margin-right" 1)
   show_left_icon_padding=$(get_tmux_option "@kanagawa-left-icon-padding" 1)
-  show_military=$(get_tmux_option "@kanagawa-military-time" false)
+  show_military=$(get_tmux_option "@kanagawa-military-time" true)
   timezone=$(get_tmux_option "@kanagawa-set-timezone" "")
   show_timezone=$(get_tmux_option "@kanagawa-show-timezone" true)
   show_left_sep=$(get_tmux_option "@kanagawa-show-left-sep" )
@@ -50,7 +50,7 @@ main() {
   show_synchronize_panes_label=$(get_tmux_option "@kanagawa-synchronize-panes-label" "Sync")
   time_format=$(get_tmux_option "@kanagawa-time-format" "")
   show_ssh_session_port=$(get_tmux_option "@kanagawa-show-ssh-session-port" false)
-  IFS=' ' read -r -a plugins <<<$(get_tmux_option "@kanagawa-plugins" "battery network weather")
+  IFS=' ' read -r -a plugins <<<$(get_tmux_option "@kanagawa-plugins" "weather")
   show_empty_plugins=$(get_tmux_option "@kanagawa-show-empty-plugins" true)
 
   # Handle left icon configuration
